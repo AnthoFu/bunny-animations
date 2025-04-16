@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 3</title>
+    <style>
+        
+        body{
+            margin: 0;
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+
+        .phone{
+            position:relative;
+            border: 8px solid black;
+            border-radius: 40px;
+            height: 500px;
+            width: 250px;
+            background-color: rgb(207, 253, 247);
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),0 15px 12px rgba(0, 0, 0, 0.2) ;
+        }
+
+        .layer-1{
+            position:absolute;
+            z-index: 1;
+            height: 370px;
+            width: 60px;
+            bottom: 0;
+            right: 50px;
+            background-color: white;
+        }
+
+        .layer-2{
+            position: absolute;
+            z-index: 2;
+            height: 370px;
+            width: 60px;
+            bottom: 0;
+            left: 50px;
+            background-color: white;
+        }
+        
+        .layer-3{
+            position: absolute;
+            z-index: 3;
+            margin: 0 auto;
+            width: 200px;
+            height: 340px;
+            background-color: antiquewhite;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .layer-4{
+            position: absolute;
+            z-index: 4;
+            width: 60px;
+            height: 280px;
+            background-color: white;
+            bottom: 0;
+            left: 20px;
+        }
+        
+        .layer-5{
+            position: absolute;
+            z-index: 5;
+            width: 150px;
+            height: 250px;
+            background-color: aquamarine;
+            bottom: 0;
+        }
+        
+        .layer-6{
+            position: absolute;
+            z-index: 6;
+            width: 60px;
+            height: 200px;
+            background-color: white;
+            bottom: 0;
+            right: 20px;
+        }
+        
+        .layer-7{
+            position: absolute;
+            z-index: 7;
+            width: 150px;
+            height: 170px;
+            background-color: blanchedalmond;
+            bottom: 0;
+            right: 0;
+            
+        }
+        
+        .layer-8{
+            position: absolute;
+            z-index: 8;
+            width: 90px;
+            height: 90px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+        }
+        
+        .layer-9{
+            position: absolute;
+            z-index: 9;
+            width: 90px;
+            height: 90px;
+            bottom: 0;
+            left: 0;
+            background-color: antiquewhite;
+        }
+        
+        .layer-10{
+            position: absolute;
+            z-index: 9;
+            width: 90px;
+            height: 90px;
+            bottom: 0;
+            right: 0;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone">
+        <div class="layer-1"></div>
+        <div class="layer-2"></div>
+        <div class="layer-3"></div>
+        <div class="layer-4"></div>
+        <div class="layer-5"></div>
+        <div class="layer-6"></div>
+        <div class="layer-7"></div>
+        <div class="layer-8"></div>
+        <div class="layer-9"></div>
+        <div class="layer-10"></div>
+    </div>
+</body>
+</html>

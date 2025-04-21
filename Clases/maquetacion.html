@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase 3</title>
     <style>
-        
-            
-            
-
         body {
-            --tierra: #76621b; 
+            --tierra: #76621b;
             margin: 0;
             height: 100vh;
             width: 100%;
@@ -36,7 +32,6 @@
             width: 60px;
             bottom: 0;
             right: 50px;
-            background-color: rgb(227, 117, 117);
         }
 
         .layer-2 {
@@ -46,7 +41,6 @@
             width: 60px;
             bottom: 0;
             left: 50px;
-            background-color: white;
         }
 
         .layer-3 {
@@ -68,7 +62,6 @@
             z-index: 4;
             width: 60px;
             height: 280px;
-            background-color: white;
             bottom: 0;
             left: 20px;
         }
@@ -81,7 +74,7 @@
             background-color: var(--tierra);
             bottom: 0;
             border: 2px solid rgb(106, 72, 27);
-            border-radius: 10px;
+            border-radius:10px 10px 10px 32px;
         }
 
         .layer-6 {
@@ -89,7 +82,6 @@
             z-index: 6;
             width: 60px;
             height: 200px;
-            background-color: white;
             bottom: 0;
             right: 20px;
         }
@@ -103,7 +95,7 @@
             bottom: 0;
             right: 0px;
             border: 2px solid rgb(106, 72, 27);
-            border-radius: 10px;
+            border-radius: 10px 10px 32px 10px
 
         }
 
@@ -115,8 +107,10 @@
             bottom: 0;
             right: 0;
             left: 0;
-            background-color: rgb(255, 255, 255);
             margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .layer-9 {
@@ -126,7 +120,6 @@
             height: 90px;
             bottom: 0;
             left: 0;
-            background-color: antiquewhite;
         }
 
         .layer-10 {
@@ -136,7 +129,6 @@
             height: 90px;
             bottom: 0;
             right: 0;
-            background-color: aquamarine;
         }
 
         .left-ear--outer {
@@ -188,7 +180,7 @@
             background-color: white;
             position: absolute;
             margin: 0 auto;
-            top: 20px;
+            top: 15px;
             left: 0;
             right: 0;
         }
@@ -216,7 +208,7 @@
             background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
                 linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
                 linear-gradient(315deg, var(--tierra) 25%, transparent 25%),
-    linear-gradient(45deg, var(--tierra) 25%, transparent 25%);
+                linear-gradient(45deg, var(--tierra) 25%, transparent 25%);
             background-size: 30px 60px;
             background-color: var(--stripe);
             height: 60px;
@@ -224,10 +216,10 @@
             border-radius: 8px 8px 0 0;
         }
 
-            .cloud {
+        .cloud {
             position: absolute;
-            bottom: 0;
-            right: 0px;
+            bottom: -14px;
+            right: -32px;
             margin: 0 auto;
             width: 150px;
             height: 60px;
@@ -240,7 +232,7 @@
             content: '';
             position: absolute;
             top: -30px;
-            left:-10px;
+            left: -10px;
             width: 60px;
             height: 60px;
             background: white;
@@ -257,8 +249,35 @@
             background: white;
             border-radius: 50%;
         }
-        <!-- Falta agregar el arbusto-->
-        
+
+        .arbusto {
+            width: 100px;
+            height: 60px;
+            background-color: #228B22; 
+            border-radius: 50% 50% 0 0; 
+            position: relative;
+            bottom: -15px; 
+        }
+
+        .hoja {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            background-color: #2E8B57; 
+            border-radius: 20px;
+        }
+
+        .hoja1 {
+            top: -10px;
+            left: 10px;
+            transform: rotate(-30deg);
+        }
+
+        .hoja2 {
+            top: -10px;
+            right: 10px;
+            transform: rotate(30deg);
+        }
 
     </style>
 </head>
@@ -331,7 +350,10 @@
             <div class="zigzag"></div>
         </div>
         <div class="layer-8">
-            <div class="grass"></div>
+            <div class="arbusto">
+                <div class="hoja hoja1"></div>
+                <div class="hoja hoja2"></div>
+            </div>
         </div>
         <div class="layer-9">
             <div class="cloud"></div>

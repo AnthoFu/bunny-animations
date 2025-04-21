@@ -1,0 +1,26 @@
+Resumen de la clase
+En esta clase vimos cual es la diferencia entre las animaciones y las transiciones,
+ya que uno se puede llegar a confundir bastante, esto debido a que ambas suenan bastante
+similar e incluso se podría llegar a pensar que son sinónimos. 
+
+Diferencia entre transiciones y animaciones
+Las transiciones solo pueden ir de un punto A a uno B en determinado tiempo.
+Sin embargo, en las animaciones, en el lapso de tiempo que va del punto A al B (osea, en el punto intermedio),
+puede haber ciertos movimientos. 
+
+
+Keyframes
+Entonces, sabiendo cual es la diferencia entre las animaciones y transiciones,
+es hora de saber como los @keyframes nos ayudan a animar a nuestros elementos.
+Un keyframe no es mas que una linea del tiempo que empieza desde el punto A y termina en el punto B.
+Nosotros le podemos decir a ese keyframe en que parte del "camino" modifique al elemento.
+Además de que nosotros le decimos cuantos segundos tiene que durar ese "viaje".
+
+
+Diagrama de ejemplo de animación mediante keyframes:
+@keyframes nombre-animation{
+    time-selector{
+        propiedad:valor;
+        propiedad:valor
+    }
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 3</title>
+    <style>
+        body {
+            --tierra: #76621b;
+            margin: 0;
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+
+        .phone {
+            position: relative;
+            border: 8px solid black;
+            border-radius: 40px;
+            height: 500px;
+            width: 250px;
+            background-color: rgb(207, 253, 247);
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .layer-1 {
+            position: absolute;
+            z-index: 1;
+            height: 370px;
+            width: 60px;
+            bottom: 0;
+            right: 50px;
+        }
+
+        .layer-2 {
+            position: absolute;
+            z-index: 2;
+            height: 370px;
+            width: 60px;
+            bottom: 0;
+            left: 50px;
+        }
+
+        .layer-3 {
+            position: absolute;
+            z-index: 3;
+            margin: 0 auto;
+            width: 200px;
+            height: 340px;
+            background-color: var(--tierra);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid rgb(106, 72, 27);
+            border-radius: 10px;
+        }
+
+        .layer-4 {
+            position: absolute;
+            z-index: 4;
+            width: 60px;
+            height: 280px;
+            bottom: 0;
+            left: 20px;
+        }
+
+        .layer-5 {
+            position: absolute;
+            z-index: 5;
+            width: 150px;
+            height: 250px;
+            background-color: var(--tierra);
+            bottom: 0;
+            border: 2px solid rgb(106, 72, 27);
+            border-radius:10px 10px 10px 32px;
+        }
+
+        .layer-6 {
+            position: absolute;
+            z-index: 6;
+            width: 60px;
+            height: 200px;
+            bottom: 0;
+            right: 20px;
+        }
+
+        .layer-7 {
+            position: absolute;
+            z-index: 7;
+            width: 150px;
+            height: 170px;
+            background-color: var(--tierra);
+            bottom: 0;
+            right: 0px;
+            border: 2px solid rgb(106, 72, 27);
+            border-radius: 10px 10px 32px 10px
+
+        }
+
+        .layer-8 {
+            position: absolute;
+            z-index: 8;
+            width: 90px;
+            height: 90px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .layer-9 {
+            position: absolute;
+            z-index: 9;
+            width: 90px;
+            height: 90px;
+            bottom: 0;
+            left: 0;
+        }
+
+        .layer-10 {
+            position: absolute;
+            z-index: 9;
+            width: 90px;
+            height: 90px;
+            bottom: 0;
+            right: 0;
+        }
+
+        .left-ear--outer {
+            background-color: white;
+            border-radius: 90%;
+            width: 12px;
+            height: 30px;
+            position: absolute;
+            left: 10px;
+        }
+
+        .left-ear--inner {
+            background-color: pink;
+            width: 6px;
+            height: 25px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0 auto;
+            left: 0;
+            border-radius: 90%;
+        }
+
+        .right-ear--outer {
+            background-color: white;
+            border-radius: 90%;
+            width: 12px;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+        }
+
+        .right-ear--inner {
+            background-color: pink;
+            width: 6px;
+            height: 25px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0 auto;
+            left: 0;
+            border-radius: 90%;
+        }
+
+        .head {
+            border-radius: 50%;
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            position: absolute;
+            margin: 0 auto;
+            top: 15px;
+            left: 0;
+            right: 0;
+        }
+
+        .head__eye {
+            background-color: black;
+            width: 5px;
+            border-radius: 50%;
+            position: absolute;
+            height: 5px;
+            top: 6px;
+
+            animation-name: blink;
+        }
+
+        @keyframes blink{
+            0% {
+
+            }
+
+            50%
+            {
+                
+            }
+        }
+
+        .head__eye_left {
+            left: 18px;
+        }
+
+        .head__eye_right {
+            right: 18px;
+        }
+
+        .zigzag {
+            --stripe: #57491e;
+            --bg: #008521;
+            background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+                linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+                linear-gradient(315deg, var(--tierra) 25%, transparent 25%),
+                linear-gradient(45deg, var(--tierra) 25%, transparent 25%);
+            background-size: 30px 60px;
+            background-color: var(--stripe);
+            height: 60px;
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .cloud {
+            position: absolute;
+            bottom: -14px;
+            right: -32px;
+            margin: 0 auto;
+            width: 150px;
+            height: 60px;
+            background: white;
+            border-radius: 50px;
+            transform: scale(0.5);
+        }
+
+        .cloud::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: -10px;
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .cloud::after {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -10px;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .arbusto {
+            width: 100px;
+            height: 60px;
+            background-color: #228B22; 
+            border-radius: 50% 50% 0 0; 
+            position: relative;
+            bottom: -15px; 
+        }
+
+        .hoja {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            background-color: #2E8B57; 
+            border-radius: 20px;
+        }
+
+        .hoja1 {
+            top: -10px;
+            left: 10px;
+            transform: rotate(-30deg);
+        }
+
+        .hoja2 {
+            top: -10px;
+            right: 10px;
+            transform: rotate(30deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="phone">
+        <div class="layer-1">
+            <div class="left-ear--outer">
+                <div class="left-ear--inner">
+                </div>
+            </div>
+            <div class="right-ear--outer">
+                <div class="right-ear--inner">
+                </div>
+            </div>
+            <div class="head">
+                <div class="head__eye head__eye_left"></div>
+                <div class="head__eye head__eye_right"></div>
+            </div>
+        </div>
+        <div class="layer-2">
+            <div class="left-ear--outer">
+                <div class="left-ear--inner">
+                </div>
+            </div>
+            <div class="right-ear--outer">
+                <div class="right-ear--inner">
+                </div>
+            </div>
+            <div class="head">
+                <div class="head__eye head__eye_left"></div>
+                <div class="head__eye head__eye_right"></div>
+            </div>
+        </div>
+        <div class="layer-3">
+            <div class="zigzag"></div>
+        </div>
+        <div class="layer-4">
+            <div class="left-ear--outer">
+                <div class="left-ear--inner">
+                </div>
+            </div>
+            <div class="right-ear--outer">
+                <div class="right-ear--inner">
+                </div>
+            </div>
+            <div class="head">
+                <div class="head__eye head__eye_left"></div>
+                <div class="head__eye head__eye_right"></div>
+            </div>
+        </div>
+        <div class="layer-5">
+            <div class="zigzag"></div>
+        </div>
+        <div class="layer-6">
+            <div class="left-ear--outer">
+                <div class="left-ear--inner">
+                </div>
+            </div>
+            <div class="right-ear--outer">
+                <div class="right-ear--inner">
+                </div>
+            </div>
+            <div class="head">
+                <div class="head__eye head__eye_left"></div>
+                <div class="head__eye head__eye_right"></div>
+            </div>
+        </div>
+        <div class="layer-7">
+            <div class="zigzag"></div>
+        </div>
+        <div class="layer-8">
+            <div class="arbusto">
+                <div class="hoja hoja1"></div>
+                <div class="hoja hoja2"></div>
+            </div>
+        </div>
+        <div class="layer-9">
+            <div class="cloud"></div>
+        </div>
+        <div class="layer-10">
+            <div class="cloud"></div>
+        </div>
+    </div>
+</body>
+
+</html>

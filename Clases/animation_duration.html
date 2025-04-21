@@ -7,7 +7,9 @@
     <title>Clase 3</title>
     <style>
         body {
-            --tierra: #76621b;
+            --dark-green: #51af5e;
+            --brown: #a54a38;
+            --tierra: #bf624c;
             margin: 0;
             height: 100vh;
             width: 100%;
@@ -21,7 +23,7 @@
             border-radius: 40px;
             height: 500px;
             width: 250px;
-            background-color: rgb(207, 253, 247);
+            background-color: rgb(183, 243, 235);
             box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
         }
 
@@ -53,7 +55,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            border: 2px solid rgb(106, 72, 27);
+            border: 2px solid var(--brown);
             border-radius: 10px;
         }
 
@@ -73,8 +75,8 @@
             height: 250px;
             background-color: var(--tierra);
             bottom: 0;
-            border: 2px solid rgb(106, 72, 27);
-            border-radius:10px 10px 10px 32px;
+            border: 2px solid var(--brown);
+            border-radius: 10px 10px 10px 32px;
         }
 
         .layer-6 {
@@ -94,9 +96,8 @@
             background-color: var(--tierra);
             bottom: 0;
             right: 0px;
-            border: 2px solid rgb(106, 72, 27);
+            border: 2px solid var(--brown);
             border-radius: 10px 10px 32px 10px
-
         }
 
         .layer-8 {
@@ -138,6 +139,7 @@
             height: 30px;
             position: absolute;
             left: 10px;
+            top: -10px;
         }
 
         .left-ear--inner {
@@ -159,6 +161,7 @@
             height: 30px;
             position: absolute;
             right: 10px;
+            top:-10px;
         }
 
         .right-ear--inner {
@@ -180,7 +183,7 @@
             background-color: white;
             position: absolute;
             margin: 0 auto;
-            top: 15px;
+            top: 10px;
             left: 0;
             right: 0;
         }
@@ -191,25 +194,24 @@
             border-radius: 50%;
             position: absolute;
             height: 5px;
-            top: 6px;
+            top: 8px;
 
             animation-name: blink;
             animation-duration: 2s;
             animation-iteration-count: infinite;
         }
 
-        @keyframes blink{
+        @keyframes blink {
             0% {
                 height: 5px;
             }
 
-            5%
-            {
+            5% {
                 transform: translate(0px, 2px);
                 height: 1px;
             }
 
-            10%{
+            10% {
                 transform: translate(0px, 0px);
                 height: 5px;
             }
@@ -224,7 +226,7 @@
         }
 
         .zigzag {
-            --stripe: #57491e;
+            --stripe: #a54a38;
             --bg: #008521;
             background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
                 linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
@@ -237,69 +239,89 @@
             border-radius: 8px 8px 0 0;
         }
 
-        .cloud {
-            position: absolute;
-            bottom: -14px;
-            right: -32px;
-            margin: 0 auto;
-            width: 150px;
-            height: 60px;
+        .layer-9__left-cloud {
             background: white;
-            border-radius: 50px;
-            transform: scale(0.5);
-        }
-
-        .cloud::before {
-            content: '';
+            border-radius: 40px 40px 0 33px;
+            display: inline-block;
+            height: 100%;
+            left: 0;
             position: absolute;
-            top: -30px;
-            left: -10px;
-            width: 60px;
-            height: 60px;
-            background: white;
-            border-radius: 50%;
-        }
-
-        .cloud::after {
-            content: '';
-            position: absolute;
-            top: -40px;
-            right: -10px;
             width: 80px;
-            height: 80px;
+        }
+
+        .layer-9__right-cloud {
             background: white;
-            border-radius: 50%;
-        }
-
-        .arbusto {
-            width: 100px;
-            height: 60px;
-            background-color: #228B22; 
-            border-radius: 50% 50% 0 0; 
-            position: relative;
-            bottom: -15px; 
-        }
-
-        .hoja {
+            border-radius: 0 40px 30px 0;
+            bottom: 0;
+            display: inline-block;
+            height: 60%;
+            left: 80px;
             position: absolute;
             width: 40px;
-            height: 20px;
-            background-color: #2E8B57; 
-            border-radius: 20px;
         }
 
-        .hoja1 {
-            top: -10px;
-            left: 10px;
-            transform: rotate(-30deg);
+        .layer-10 {
+            bottom: 0;
+            height: 100px;
+            position: absolute;
+            right: 0;
+            width: 120px;
+            z-index: 10;
         }
 
-        .hoja2 {
-            top: -10px;
-            right: 10px;
-            transform: rotate(30deg);
+        .layer-10__left-cloud {
+            background: white;
+            border-radius: 40px 0 0 30px;
+            bottom: 0;
+            display: inline-block;
+            height: 60%;
+            right: 80px;
+            position: absolute;
+            width: 40px;
         }
 
+        .layer-10__right-cloud {
+            background: white;
+            border-radius: 40px 40px 33px 0;
+            display: inline-block;
+            height: 100%;
+            right: 0px;
+            position: absolute;
+            width: 80px;
+        }
+
+        .layer-8__left-lawn {
+            background: var(--dark-green);
+            border-radius: 40px 40px 0 0;
+            bottom: 0;
+            display: inline-block;
+            height: 70%;
+            left: -15px;
+            position: absolute;
+            width: 50px;
+        }
+
+        .layer-8__center-lawn {
+            background: var(--dark-green);
+            border-radius: 40px 40px 0 0;
+            bottom: 0;
+            display: inline-block;
+            height: 100%;
+            left: 15px;
+            position: absolute;
+            width: 50px;
+        }
+
+        .layer-8__right-lawn {
+            background: var(--dark-green);
+            border-radius: 40px 40px 0 0;
+            bottom: 0;
+            display: inline-block;
+            height: 80%;
+            left: 60px;
+            position: absolute;
+            width: 50px;
+        }
     </style>
 </head>
 
@@ -371,18 +393,19 @@
             <div class="zigzag"></div>
         </div>
         <div class="layer-8">
-            <div class="arbusto">
-                <div class="hoja hoja1"></div>
-                <div class="hoja hoja2"></div>
-            </div>
+            <div class="layer-8__left-lawn"></div>
+            <div class="layer-8__center-lawn"></div>
+            <div class="layer-8__right-lawn"></div>
         </div>
         <div class="layer-9">
-            <div class="cloud"></div>
+            <div class="layer-9__left-cloud"></div>
+            <div class="layer-9__right-cloud"></div>
         </div>
+
         <div class="layer-10">
-            <div class="cloud"></div>
+            <div class="layer-10__left-cloud"></div>
+            <div class="layer-10__right-cloud"></div>
         </div>
-    </div>
 </body>
 
 </html>

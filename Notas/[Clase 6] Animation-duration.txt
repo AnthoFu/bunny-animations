@@ -1,0 +1,7 @@
+Ahora vamos a necesitar poner a parpadear a los ojos,
+para esto necesitamos un tiempo para que parpadeé y que sea infinito.
+Para esto vamos a usar dos propiedades principales, las cuales son:
+
+1. animation-duration: Nos da cuanto va a durar haciendo la animación.
+
+2. animation-iteration-count: cuantas veces se va a ejecutar la animación. n veces.

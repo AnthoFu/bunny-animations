@@ -1,0 +1,7 @@
+Animation Timing Function: Básicamente es la aceleración con la cual correrá nuestra animación.
+Animation Iteration Count: Es el número de veces que se repetirán nuestra animación.
+Animation Delay: Es el tiempo que nuestra animación tardará en empezar.
+
+Pagina utilizada en la clase:
+
+https://cubic-bezier.com/#.17,.67,.83,.67

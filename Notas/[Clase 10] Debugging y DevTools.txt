@@ -1,0 +1,10 @@
+Utilizar las herramientas como Chrome Devtools es muy conveninente para el momento de hacer debugging
+ya que permite inspeccionar el código, monitorear el rendimiento y analizar el comportamiento de las aplicaciones web en tiempo real.
+
+En el Devtools, en los tres puntitos a la parte derecha, aparece una opcion que dice 'more tools'.
+
+En esta clase se enfocaron a utilizar el panel 'Rendering'. Donde podemos grabar el estado de renderizado de nuestra aplicacion
+para poder analizar y optimizar el rendimiento de la misma.
+
+Tambien podemos utilizar en 'more tools' el panel 'animations'. 
+Donde permite analizar cada una de las animaciones que este sucediendo en la pantalla. :)
